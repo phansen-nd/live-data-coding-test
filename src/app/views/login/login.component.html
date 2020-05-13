@@ -1,0 +1,18 @@
+<div id="login-container">
+    <div>Login</div>
+    <br>
+    <form *ngIf="!token">
+        <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" name="email" [(ngModel)]="loginObject.email">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" name="password" [(ngModel)]="loginObject.password">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="onLoginClick()">Login</button>
+    </form>
+    <div *ngIf="token">Token: {{token}}</div>
+</div>
