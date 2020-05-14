@@ -14,5 +14,9 @@
         <br>
         <button mat-raised-button color="primary" (click)="onLoginClick()">Login</button>
     </form>
-    <div *ngIf="token">Token: {{token}}</div>
+    <div *ngIf="token">
+        <div>Success</div>
+        <br>
+        <div>Token: {{token}}</div>
+    </div>
 </div>
